@@ -47,7 +47,7 @@ In order to use the presented model, the user is required to have already instal
 
 There are two ways to use the library:
 1. Download the repository and copy the files in a python project
-2. Download the file located at dist/siamese_network_generator-0.1.0-py3-none-any.whl in this repository, then in your python project you can run the following comand (replacing "/path/to" with your actual path):
+2. Download and install the compressed python library: Download the file located at dist/siamese_network_generator-0.1.0-py3-none-any.whl in this repository, then in your python project you can run the following comand (replacing "/path/to" with your actual path):
 
 ```bash
 $ pip install /path/to/siamese_network_generator-0.1.0-py3-none-any.whl
@@ -58,7 +58,27 @@ Once you have installed your Python library, you can import it using:
 import siamese_network_generator
 from siamese_network_generator import simese_network_actions
 ```
+
+For both ways, you need to install the some dependencies for the library to run properly. You can easily install these dependencies using PIP, but note that they might take some time. Note to update PIP before using the following commands:
+
+```bash
+pip install tensorflow==2.5
+pip install pandas
+pip install keras
+
+```
+
+You can also run this library using Anaconda, to train the model with your gpu. For this case, you will need to run the following commands in your environment:
+```bash
+conda install -c conda-forge tensorflow==2.5
+conda install pandas
+conda install -c conda-forge keras
+
+```
+
+
+
 ## Examples
 
-from mypythonlib import myfunctions
+
 
