@@ -7,6 +7,7 @@ This is now an [OPEN Open Source](http://openopensource.org/) project. This pyth
 ## Contents
 
 * [Introduction](#introduction)
+* [Usage](#usage)
 * [Getting Started](#getting-started)
 * [Examples](#examples)
 
@@ -40,6 +41,10 @@ Where ’margin’ represent the actual margin that is enforced between positive
 
 Now the Siamese Network is ready for training. To test the results of the network, I generated the embedding of all the images from the training set, then I took all the test images one by one, generated an embedding and find the closest matching embedding from the training set. For the training of such a model, it is required to
 select triplets of anchor, positive and negative images.
+
+## Usage
+
+Given a dataset of images from multiple classes. Each class must contain one or more images. This library can be used to train a model to recognize the class of a new image by selecting the closest match from the initial dataset.
 
 ## Getting started
 
@@ -80,5 +85,7 @@ conda install -c conda-forge keras
 
 ## Examples
 
+To ilustrate an example a simple usage of this library is presented in the test folder.
 
+Here, 
 
