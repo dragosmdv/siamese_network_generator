@@ -26,3 +26,8 @@ The final step was to define the Siamese Model with a custom training and testin
 </p>
 
 Where ’margin’ represent the actual margin that is enforced between positive and negative pairs. This loss function is used to ensure that an image A (anchor) is closer to all other images P (positive) of the same class than it is to any image N (negative). A visual representation of the effect of this function is the following image
+
+![alt text]([http://url/to/img.png](https://i.imgur.com/ynewXQM.jpeg))
+
+Now the Siamese Network is ready for training. To test the results of the network, I generated the embedding of all the images from the training set, then I took all the test images one by one, generated an embedding and find the closest matching embedding from the training set. For the training of such a model, it is required to
+select triplets of anchor, positive and negative images.
