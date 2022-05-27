@@ -100,5 +100,32 @@ conda install -c conda-forge keras
 
 To ilustrate an example a simple usage of this library is presented in the test folder.
 
-Here, 
+First, we set the train_file, test_file, save_path and epochs variables
+
+```bash
+    test_file = "datasets/test_images"
+    train_file = "datasets/train_images"
+    save_path = "generated_models/myModel_v16"
+    epochs = 1
+```
+
+Then, using the **generate_model** function, we generate a model in the "generated_models/" package of the current folder.
+
+If everything works properly, you should see in logs a "Fetching triplet for ..." statement for each class, first for train images then for test  images. Then you sould see a loading bar that describes the progress of the training for an epoch:
+```bash
+    14/14 [==============================] - 112s 7s/step - loss: 0.6285 - val_loss: 0.1865
+```
+
+After the model is saved, we can use it to predict some images. For the first test, we used a image from the class named "Opera_Națională_Română_din_Cluj-Napoca" that was not included in the train process. This image is saved in "test_image.jpg". After running the prediction, in the console will appear the name of the predicted class, among with its tensor that contains the specific distance (that varies depending on the training of the model)
+
+```bash
+('Opera_Națională_Română_din_Cluj-Napoca', <tf.Tensor: shape=(1,), dtype=float32, numpy=array([0.9060962], dtype=float32)>)
+```
+
+For the second example, we used a image from the class named "Biserica_evanghelică_din_Cluj-Napoca" that **was** included in the train dataset. The model was trained to recognize the exact same image, so it should recognize the same class name with a distance of 0
+
+```bash
+('Biserica_evanghelică_din_Cluj-Napoca', <tf.Tensor: shape=(1,), dtype=float32, numpy=array([0.], dtype=float32)>)
+```
+
 
