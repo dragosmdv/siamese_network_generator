@@ -10,6 +10,7 @@ This is now an [OPEN Open Source](http://openopensource.org/) project. This pyth
 * [Usage](#usage)
 * [Getting Started](#getting-started)
 * [Examples](#examples)
+* [Extensions](#extensions)
 
 ## Introduction
 
@@ -128,4 +129,7 @@ For the second example, we used a image from the class named "Biserica_evangheli
 ('Biserica_evanghelică_din_Cluj-Napoca', <tf.Tensor: shape=(1,), dtype=float32, numpy=array([0.], dtype=float32)>)
 ```
 
+## Extensions
+
+This library contains a simple implementation of a siamese network for image predictions. The network is very customizable in terms of model params. Feel free to experiment the alterations of the model with different base models, architectures, learning params and datasets.
 
