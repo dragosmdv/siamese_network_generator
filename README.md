@@ -44,7 +44,20 @@ select triplets of anchor, positive and negative images.
 
 ## Usage
 
-Given a dataset of images from multiple classes. Each class must contain one or more images. This library can be used to train a model to recognize the class of a new image by selecting the closest match from the initial dataset.
+Given a dataset of images from multiple classes where each class must contain one or more images, this library can be used to train a model to recognize the class of a new image by selecting the closest match from the initial train dataset.
+
+The library contains two functions:
+
+**1. generate_model(test_file, train_file, save_path, epochs)**
+- **test_file** represents the path to your test dataset package. The package must contain a sub-folder for each individual class, having the name of the class equal to the name of the sub-folder. In each sub-folder there must be similar images from the same class.
+- **train_file** represents the path to your train dataset package. Same as the first package, it must contain a sub-folder for each individual class, having the name of the class equal to the name of the sub-folder. In each sub-folder there must be similar images from the same class. The number of samples from the two datasets could vary, it is recommended a ratio of 7/3 train/test. 
+- **save_path** represents the path where you want yo save your created model
+- **epochs** represents the number of epochs that you want to use in training your model
+
+**2. test_prediction(image_path, model_path, train_dataset_path)**
+- **image_path** represents the path of the image that you want to predict
+- **model_path** represents the path of the generated model (identical to **save_path** if you want to use the previousely generated model)
+- **train_dataset_path** represents the path to a dataset that contains the classes from which that you want to predict. In order to obtain good results, the initial train dataset is used most of the time.
 
 ## Getting started
 
