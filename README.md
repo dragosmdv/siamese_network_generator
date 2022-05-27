@@ -131,5 +131,7 @@ For the second example, we used a image from the class named "Biserica_evangheli
 
 ## Extensions
 
-This library contains a simple implementation of a siamese network for image predictions. The network is very customizable in terms of model params. Feel free to experiment the alterations of the model with different base models, architectures, learning params and datasets.
+This library contains a simple implementation of a siamese network for image predictions. The model can easily be integrated in both web or mobile applications.
+
+The network is very customizable in terms of model params. Feel free to experiment the alterations of the model with different base models, architectures, learning params and datasets.
 
